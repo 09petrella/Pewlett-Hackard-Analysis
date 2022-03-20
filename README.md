@@ -20,6 +20,23 @@ Our purpose for the analysis was a continuation from our employee research into 
 Pewlett Hackard will need to fill a total of 72,458 roles within the company when the "silver tsunami" begins to occur and this is determined from the sum of the above Retiring Titles Chart. This chart is compiled from all current employees who are entering the age range to be considering retirement soon. From the Mentorship Eligibility table, the total count of employees who are eligible to participate in the program is 1,549. There is a significant amount more retirement ready employees who can mentor the next group of eligible participants for the program, a recommendation would be to increase the criteria for employees who are eligible to be mentored through the program to take full advantage of the ample number of retiring employees who can mentor the next group. For additional insight into the current mentorship eligible employees, the below query provides the employee information along with their departments. A further breakdown is provided in the Mentorship Department table below that shows the employee count for mentorship eligibility across Pewlett Hackard's departments. 
 
 ```
+--Mentorship ready employees including Departments
+SELECT DISTINCT ON (e.emp_no) e.emp_no,
+	e.first_name,
+	e.last_name,
+	e.birth_date,
+	de.from_date,
+	de.to_date,
+	d.dept_name
+INTO mentorship_department
+FROM employees as e
+INNER JOIN dept_emp as de
+ON (e.emp_no = de.emp_no)
+INNER JOIN departments as d
+ON (de.dept_no = d.dept_no)
+WHERE (de.to_date = '9999-01-01')
+AND (e.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
+ORDER BY e.emp_no;
 
 ```
 
