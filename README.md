@@ -12,7 +12,7 @@ Our purpose for the analysis was a continuation from our employee research into 
 - The significant majority of upcoming Retiring Titles will be from Senior positions, specifically Senior Engineer at 25,916 and Senior Staff at 24,926. 
 - The mid-level positions do have a noticeable number of employees considered to be retiring soon but not as significant as the senior positions, for Engineers at 9,285 employees and Staff title at 7,636. 
 - The Mentorship Eligibility program with the current criteria has a count of 1,549 employees eligible to participate in the program. 
-![Retiring Title Chart]
+![Retiring Title Chart](resources/retiring_titles.png)
 
 ## Pewlett Hackard Analysis Summary
 
@@ -23,7 +23,7 @@ Pewlett Hackard will need to fill a total of 72,458 roles within the company whe
 
 ```
 
-![Mentorship Department Table]
+![Mentorship Department Table](resources/mentorship_departments.png)
 
 
 
